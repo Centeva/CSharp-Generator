@@ -1,0 +1,9 @@
+C:\source\TypeScripter2\CSharp-Generator\common\bin\Debug\netstandard2.0\common.deps.json
+C:\source\TypeScripter2\CSharp-Generator\common\bin\Debug\netstandard2.0\common.dll
+C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.csprojAssemblyReference.cache
+C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.csproj.CoreCompileInputs.cache
+C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.AssemblyInfoInputs.cache
+C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.AssemblyInfo.cs
+C:\source\TypeScripter2\CSharp-Generator\common\bin\Debug\netstandard2.0\common.pdb
+C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.dll
+C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.pdb
