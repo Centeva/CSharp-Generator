@@ -7,3 +7,12 @@ C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.
 C:\source\TypeScripter2\CSharp-Generator\common\bin\Debug\netstandard2.0\common.pdb
 C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.dll
 C:\source\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.pdb
+C:\Code\TypeScripter2\CSharp-Generator\common\bin\Debug\netstandard2.0\common.deps.json
+C:\Code\TypeScripter2\CSharp-Generator\common\bin\Debug\netstandard2.0\common.dll
+C:\Code\TypeScripter2\CSharp-Generator\common\bin\Debug\netstandard2.0\common.pdb
+C:\Code\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.csprojAssemblyReference.cache
+C:\Code\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.csproj.CoreCompileInputs.cache
+C:\Code\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.AssemblyInfoInputs.cache
+C:\Code\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.AssemblyInfo.cs
+C:\Code\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.dll
+C:\Code\TypeScripter2\CSharp-Generator\common\obj\Debug\netstandard2.0\common.pdb

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -16,17 +17,24 @@ namespace common
 
         public static void Run(string optionsPath)
         {
+            var timer = new Stopwatch();
+            timer.Start();
             _options = JsonConvert.DeserializeObject<Options>(File.ReadAllText(optionsPath));
 
-            var implementingModels = new HashSet<Type>(GetModelsFromSource(_options.Source).SelectMany(GetModelsFromImplementingType));
-            Console.WriteLine("Found {0} Source Types", implementingModels.Count);
-
+            var entryModels = GetModelsFromSource(_options.Source);
+            Console.WriteLine($"Found {entryModels.Count} entry Models.");
+            if (_options.Verbose) Console.WriteLine($"\t{String.Join(", ", entryModels.Select(i => i.Name))}");
+            var implementingModels = new HashSet<Type>(entryModels.SelectMany(GetModelsFromImplementingType));
+            if (_options.Verbose) Console.WriteLine($"Found {implementingModels.Count} used Models.");
+            if (_options.Verbose) Console.WriteLine($"\t{String.Join(", ", implementingModels.Select(i => i.Name))}");
             var allModels = GetAllModelsToGenerate(implementingModels);
-            Console.WriteLine("Generating {0} Models", allModels.Count);
+            Console.WriteLine($"Generating {allModels.Count} Models.");
+
             var generator = new JSchemaGenerator();
             var schema = new HashSet<JSchema>( allModels.Select(generator.Generate));
-
             File.WriteAllText(_options.Destination, JsonConvert.SerializeObject(schema));
+            timer.Stop();
+            Console.WriteLine($"Completed in {timer.ElapsedMilliseconds}ms.");
         }
 
         public static Type GetPropertyType(this PropertyInfo pi)
@@ -40,14 +48,12 @@ namespace common
 
         private static IEnumerable<Type> GetImplementingTypes(Assembly a)
         {
-            return TryGetImplementingTypes(a).Where(t => t.BaseType != null && _options.CollectionTypeNames.Contains(t.BaseType.Name));
+            return TryGetImplementingTypes(a).Where(t => t.GetInterfaces().Any(i => _options.CollectionTypeNames.Contains(i.Name)));
         }
         private static IEnumerable<Type> TryGetImplementingTypes(Assembly a)
         {
             try
             {
-                Console.WriteLine($"Assembly {0} Models", a.FullName);
-                Console.WriteLine(String.Join(", ", a.GetTypes().Select(t => t.Name).ToList()));
                 return a.GetTypes();
             }
             catch { return Enumerable.Empty<Type>(); }
@@ -56,17 +62,13 @@ namespace common
         private static List<Type> GetModelsFromSource(string rootPath)
         {
             var dlls = _options.Dlls.SelectMany(f => Directory.GetFiles(rootPath, f));// Get dll files from options file list.
-            Console.WriteLine($"dlls found {0}", dlls.Count());
-            Console.WriteLine(String.Join(", ", dlls));
-            Console.WriteLine(_options.Source);
             var assemblies = dlls.Select(Load).Where(a => a != null);// Load the assemblies so we can reflect on them
-            Console.WriteLine(assemblies.Count());
             return assemblies.SelectMany(GetImplementingTypes).ToList();// Find all Types that inherit from Implementing types.
         }
 
         private static Assembly Load(string path)
         {
-            try { return Assembly.LoadFile(path); }
+            try { return Assembly.LoadFrom(path); }
             catch { return null; }
         }
 
@@ -111,11 +113,11 @@ namespace common
             return models;
         }
 
+
         private static IEnumerable<Type> GetModelsFromMethod(MethodInfo arg)
         {
             return GetModelTypes(arg.ReturnType)
                 .Union(arg.GetParameters()
-                    .Where(p => !HasAttributeNamed(p, "FromUriAttribute")) // All FromUri parameters will be expanded later in the DataServiceGenerator
                     .Select(p => p.ParameterType)
                     .SelectMany(GetModelTypes)
                 );

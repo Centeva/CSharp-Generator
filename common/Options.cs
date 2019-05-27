@@ -10,5 +10,6 @@ namespace common
         public string Destination { get; set; }
         public List<string> Dlls { get; set; }
         public List<string> CollectionTypeNames { get; set; }
+        public bool Verbose { get; set; } = false;
     }
 }

@@ -12,3 +12,17 @@ C:\source\TypeScripter2\CSharp-Generator\core\bin\Debug\netcoreapp2.1\common.pdb
 C:\source\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.csproj.CopyComplete
 C:\source\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.dll
 C:\source\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.pdb
+C:\Code\TypeScripter2\CSharp-Generator\core\bin\Debug\netcoreapp2.1\core.deps.json
+C:\Code\TypeScripter2\CSharp-Generator\core\bin\Debug\netcoreapp2.1\core.runtimeconfig.json
+C:\Code\TypeScripter2\CSharp-Generator\core\bin\Debug\netcoreapp2.1\core.runtimeconfig.dev.json
+C:\Code\TypeScripter2\CSharp-Generator\core\bin\Debug\netcoreapp2.1\core.dll
+C:\Code\TypeScripter2\CSharp-Generator\core\bin\Debug\netcoreapp2.1\core.pdb
+C:\Code\TypeScripter2\CSharp-Generator\core\bin\Debug\netcoreapp2.1\common.dll
+C:\Code\TypeScripter2\CSharp-Generator\core\bin\Debug\netcoreapp2.1\common.pdb
+C:\Code\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.csprojAssemblyReference.cache
+C:\Code\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.csproj.CoreCompileInputs.cache
+C:\Code\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.AssemblyInfoInputs.cache
+C:\Code\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.AssemblyInfo.cs
+C:\Code\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.csproj.CopyComplete
+C:\Code\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.dll
+C:\Code\TypeScripter2\CSharp-Generator\core\obj\Debug\netcoreapp2.1\core.pdb

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Source\\TypeScripter2\\CSharp-Generator\\common\\common.csproj": {}
+    "C:\\Code\\TypeScripter2\\CSharp-Generator\\common\\common.csproj": {}
   },
   "projects": {
-    "C:\\Source\\TypeScripter2\\CSharp-Generator\\common\\common.csproj": {
+    "C:\\Code\\TypeScripter2\\CSharp-Generator\\common\\common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\TypeScripter2\\CSharp-Generator\\common\\common.csproj",
+        "projectUniqueName": "C:\\Code\\TypeScripter2\\CSharp-Generator\\common\\common.csproj",
         "projectName": "common",
-        "projectPath": "C:\\Source\\TypeScripter2\\CSharp-Generator\\common\\common.csproj",
-        "packagesPath": "C:\\Users\\devyn.cyphers\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\TypeScripter2\\CSharp-Generator\\common\\obj\\",
+        "projectPath": "C:\\Code\\TypeScripter2\\CSharp-Generator\\common\\common.csproj",
+        "packagesPath": "C:\\Users\\devco\\.nuget\\packages\\",
+        "outputPath": "C:\\Code\\TypeScripter2\\CSharp-Generator\\common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\devyn.cyphers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\devco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://builds.cen.centeva.com/guestAuth/app/nuget/feed/_Root/default/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
